@@ -2,15 +2,21 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../Context/GlobalState";
 
 const TransactionHistory = () => {
-  const { transactions } = useContext(GlobalContext);
+  const { transactions, deleteTransaction } = useContext(GlobalContext);
   console.log(transactions);
   return (
     <div>
       <h2>Transaction History</h2>
-      {transactions.map((transaction, index) => (
-        <div key={index}>
+      {transactions.map((transaction, id) => (
+        <div key={id}>
           <ol>
-            {transaction.description} <span>{transaction.amount}</span>
+            {transaction.description}{" "}
+            <span>
+              {transaction.amount}{" "}
+              <button onClick={() => deleteTransaction(transaction.id)}>
+                X
+              </button>
+            </span>
           </ol>
         </div>
       ))}
