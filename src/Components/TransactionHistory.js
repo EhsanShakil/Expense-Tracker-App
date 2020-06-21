@@ -9,9 +9,9 @@ const TransactionHistory = () => {
       <h2>Transaction History</h2>
       {transactions.map((transaction, index) => (
         <div key={index}>
-          <li>
+          <ol>
             {transaction.description} <span>{transaction.amount}</span>
-          </li>
+          </ol>
         </div>
       ))}
     </div>

@@ -7,7 +7,7 @@ const Balance = () => {
   const total = amount.reduce((total, item) => (total += item), 0).toFixed(2);
   return (
     <div>
-      <h2>Your Balance</h2>
+      <h2>Current Balance</h2>
       <h1>${total}</h1>
     </div>
   );
