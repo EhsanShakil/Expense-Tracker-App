@@ -25,7 +25,10 @@ const AddTransaction = () => {
     <div>
       <h2>Add Transaction</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="description">Description</label>
+        <label htmlFor="description">
+          <b>Description:</b>
+        </label>
+        <br />
         <input
           required
           id="description"
@@ -33,7 +36,13 @@ const AddTransaction = () => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <label htmlFor="transactionamount">Transaction Amount</label>
+        <br />
+        <br />
+        <label htmlFor="transactionamount">
+          <b>Transaction Amount:</b>
+        </label>
+
+        <br />
         <input
           required
           type="number"
@@ -41,6 +50,8 @@ const AddTransaction = () => {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
+        <br />
+        <br />
         <button className="btn btn-primary">Add Transaction</button>
       </form>
     </div>

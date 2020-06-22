@@ -1,4 +1,22 @@
+.header {
+  text-align: center;
+  margin: 30px;
+  font-weight: bold;
+}
 .balance {
   display: flex;
   justify-content: space-evenly;
+}
+
+.transaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 880px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }

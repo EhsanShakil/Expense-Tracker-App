@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../Context/GlobalState";
+import Card from "react-bootstrap/Card";
 
 const Expense = () => {
   const { transactions } = useContext(GlobalContext);
@@ -9,8 +10,18 @@ const Expense = () => {
   const total = income.reduce((total, item) => (total += item), 0);
   return (
     <div>
-      <h2>Expense</h2>
-      <h1>-${Math.abs(total)}</h1>
+      <Card border="danger" style={{ width: "18rem", borderWidth: "4px" }}>
+        <Card.Body>
+          <Card.Title>
+            <h2>Expense</h2>
+          </Card.Title>
+          <Card.Text>
+            <h3>
+              <b>-${Math.abs(total)}</b>
+            </h3>
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
