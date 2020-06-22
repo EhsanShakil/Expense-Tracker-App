@@ -3,7 +3,7 @@ import { GlobalContext } from "../Context/GlobalState";
 
 const AddTransaction = () => {
   const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
 
   const { addTransaction } = useContext(GlobalContext);
 
@@ -17,7 +17,7 @@ const AddTransaction = () => {
     };
     addTransaction(newTransaction);
 
-    setAmount(0);
+    setAmount("");
     setDescription("");
   };
 
@@ -40,6 +40,13 @@ const AddTransaction = () => {
         <br />
         <label htmlFor="transactionamount">
           <b>Transaction Amount:</b>
+          <br />
+
+          <span style={{ fontSize: "14px" }}>(Positive values for income)</span>
+          <br />
+          <span style={{ fontSize: "14px" }}>
+            (Negative values for expense)
+          </span>
         </label>
 
         <br />
