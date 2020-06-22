@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../Context/GlobalState";
 import Card from "react-bootstrap/Card";
-
 const Income = () => {
   const { transactions } = useContext(GlobalContext);
 
@@ -10,7 +9,7 @@ const Income = () => {
   const total = income.reduce((total, item) => (total += item), 0);
 
   return (
-    <div>
+    <div className="incomecomponent">
       <Card border="primary" style={{ width: "18rem", borderWidth: "4px" }}>
         <Card.Body>
           <Card.Title>

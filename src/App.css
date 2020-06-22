@@ -15,8 +15,18 @@
   margin-top: 30px;
 }
 @media only screen and (max-width: 880px) {
-  .container {
+  .balance,
+  .transaction {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .balancecomponent {
+    margin-bottom: 20px;
+  }
+  .expensecomponent {
+    margin-bottom: 20px;
+  }
+  .incomecomponent {
+    margin-bottom: 20px;
   }
 }

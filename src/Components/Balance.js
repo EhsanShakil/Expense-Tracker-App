@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../Context/GlobalState";
 import Card from "react-bootstrap/Card";
-
 const Balance = () => {
   const { transactions } = useContext(GlobalContext);
 
@@ -10,7 +9,7 @@ const Balance = () => {
   console.log(total);
 
   return (
-    <div>
+    <div className="balancecomponent">
       <Card border="success" style={{ width: "18rem", borderWidth: "4px" }}>
         <Card.Body>
           <Card.Title>

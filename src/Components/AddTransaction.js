@@ -22,7 +22,7 @@ const AddTransaction = () => {
   };
 
   return (
-    <div>
+    <div className="addtransaction">
       <h2>Add Transaction</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="description">

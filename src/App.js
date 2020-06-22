@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 function App() {
   return (
-    <GlobalProvider className="container">
+    <GlobalProvider>
       <Header />
       <div className="balance">
         <Balance />

@@ -6,8 +6,10 @@ const TransactionHistory = () => {
   const { transactions, deleteTransaction } = useContext(GlobalContext);
   console.log(transactions);
   return (
-    <div>
-      <h2>Transaction History</h2>
+    <div className="transactionhistory">
+      <h2>
+        <center>Transaction History</center>
+      </h2>
       <Table striped bordered hover>
         <thead>
           <tr>
