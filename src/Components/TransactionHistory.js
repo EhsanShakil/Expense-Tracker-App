@@ -22,7 +22,9 @@ const TransactionHistory = () => {
           {transactions.map((transaction, id) => (
             <tr>
               <td key={id}>{transaction.description}</td>
-              <td>{transaction.amount}</td>
+              <td>
+                {transaction.amount === 0 ? alert("Ahsan") : transaction.amount}
+              </td>
               <td>
                 <button
                   className="btn btn-danger"
