@@ -1,13 +1,11 @@
 import React, { useContext } from "react";
-import { GlobalCnntext, GlobalContext } from "../Context/GlobalState";
+import { GlobalContext } from "../Context/GlobalState";
 const Income = () => {
   const { transactions } = useContext(GlobalContext);
 
   const amount = transactions.filter((transaction) => transaction.amount > 0);
-  const income = amount.map((income) => income.amount);
+  const income = transactions.map((income) => income.amount);
   const total = income.reduce((total, item) => (total += item), 0);
-
-  console.log(total);
 
   return (
     <div>

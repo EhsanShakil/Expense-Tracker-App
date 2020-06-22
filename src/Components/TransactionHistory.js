@@ -9,15 +9,15 @@ const TransactionHistory = () => {
       <h2>Transaction History</h2>
       {transactions.map((transaction, id) => (
         <div key={id}>
-          <ol>
-            {transaction.description}{" "}
+          <li>
+            {transaction.description}
             <span>
-              {transaction.amount}{" "}
+              {transaction.amount}
               <button onClick={() => deleteTransaction(transaction.id)}>
                 X
               </button>
             </span>
-          </ol>
+          </li>
         </div>
       ))}
     </div>
